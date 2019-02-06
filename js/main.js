@@ -1,16 +1,13 @@
 $(document).ready(function() {
+  $(".menu-btn").on("click", function() {
+    $(".nav ul").toggleClass("open");
+  });
 
-    $(".burger-nav").on("click", function() {
+  function animate() {
+    $(".headtext")
+      .hide()
+      .fadeIn(5000);
+  }
 
-        $(".nav ul").toggleClass("open");
-    });
-
-    function animate() {
-        $(".headtext")
-        .hide()
-        .fadeIn(5000);
-
-    }
-
-    window.onload = animate;
+  window.onload = animate;
 });

@@ -23,29 +23,47 @@ html {
   left: 10%;
   border-radius: 0px;
   margin: 0%;
+  margin-bottom: 100px;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "nav-logo nav nav";
+  grid-gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin-top: 10px;
+}
+
+.nav-logo {
+  grid-area: nav-logo;
+  width: 150px;
+  height: 100px;
+  margin: 0px;
 }
 
 .nav {
-  width: auto;
+  grid-area: nav;
   background: white;
-  overflow: auto;
   padding-top: 0;
+  margin-top: 15px;
+  position: relative;
+  left: 0%;
+  width: 1000px;
 }
 
-ul {
+ul.menu {
   padding: 0;
-  margin: 0 0 0 150px;
+  margin: 10px;
   list-style: none;
-  position: absolute;
-  left: 10%;
 }
 
-li {
+.menu li {
   float: left;
 }
 
-li a {
-  font-size: 16px;
+.menu li a {
+  font-size: 18px;
 }
 
 .nav a {
@@ -62,6 +80,7 @@ li a {
 .nav ul li a {
   width: fit-content;
 }
+
 nav a:hover {
   transition: 0.5s;
   text-transform: uppercase;
@@ -70,20 +89,23 @@ nav a:hover {
 
 /* Social Media icons - font awesome */
 .icons {
-  margin-top: 60px;
-  margin-bottom: 200px;
-  width: 100%;
-}
-.media-icons {
-  display: inline-block;
-  margin: 0%;
-  position: absolute;
-  left: 0%;
+  margin-left: 0px;
+  margin-top: 10px;
   width: 100%;
 }
 
-.media-icons i {
-  width: 7%;
+.media-icons {
+  display: block;
+  margin: 10px;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  list-style: none;
+}
+
+.media-icons li {
+  float: left;
+  width: 30%;
 }
 
 div .media-icons-footer {
@@ -115,6 +137,7 @@ div .media-icons-footer {
   position: relative;
   left: 25%;
   max-width: 55%;
+  margin-top: 100px;
 }
 
 .headtext-1 {
@@ -136,8 +159,9 @@ div .media-icons-footer {
   font-display: auto;
   text-justify: auto;
   position: relative;
-  left: 10%;
+  left: 15%;
   max-width: 70%;
+  margin-top: 100px;
 }
 
 /* Work Culture - Home Page */
@@ -248,12 +272,17 @@ div .media-icons-footer {
   flex: 1;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  margin: 10px;
+  margin: 5px;
   text-align: center;
   border: 1px solid;
   border-color: lightgray;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.flex-row-img {
+  width: 305px;
+  height: 450px;
 }
 
 .project-grid {
@@ -331,6 +360,12 @@ textarea.myform-item {
   margin-left: 20px;
 }
 
+#btn-submit {
+  height: 40px;
+  width: 100px;
+  margin-left: 20px;
+}
+
 .image-container {
   width: 2850px;
   height: 600px;
@@ -389,8 +424,8 @@ MEDIA QUERIES
 ***************************************
 ***************************************
 */
-/* CSS styling for mobile phones */
-@media screen and (max-width: 1024px) {
+/* CSS styling for large tablets and small laptops */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   html {
     overflow-x: hidden;
   }
@@ -492,8 +527,8 @@ MEDIA QUERIES
 
   /* flex-container */
   .flex-image {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
   }
   .flex-container {
     flex-direction: column;
@@ -506,20 +541,23 @@ MEDIA QUERIES
   }
   .flex-container-row {
     flex-direction: column;
+    width: 85%;
+    position: relative;
+    left: 5vh;
   }
 
-  .flex-container-row div img {
-    width: 99%;
+  .flex-row-img {
+    width: 490px;
+    height: 600px;
   }
-
   /* Big Image at Home page */
   .big-image {
     width: 100%;
     overflow: hidden;
   }
   .slider-image {
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 470px;
   }
 
   /* Blockquote at About Me page */
@@ -539,14 +577,14 @@ MEDIA QUERIES
   /* Forms */
   /* Feedback Form */
   .myform {
-    width: 90%;
+    width: 80%;
     position: relative;
     left: 10px;
     border-radius: 0%;
   }
 
   .myform-item {
-    width: 75%;
+    width: 85%;
     height: 40px;
   }
 
@@ -587,6 +625,11 @@ MEDIA QUERIES
   }
   /* Footer */
 
+  .footer-icon {
+    position: relative;
+    left: 20%;
+    margin-top: 40px;
+  }
   .footer ul {
     display: block;
   }
@@ -597,5 +640,39 @@ MEDIA QUERIES
   .footer ul li a {
     font-size: 10px;
     text-align: left;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MEDIA QUERY FOR MOBILE PHONES
+*/
+/* css styling for ipads and mini-tablets */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+  .container-1 {
+    width: 80%;
+    margin: 1% 0%;
+    position: absolute;
+    left: 10%;
+  }
+
+  /*Naviagtion  Bar */
+  .burger-nav {
+    display: block;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 30vw;
+    left: 2px;
+    background: url(http://192.168.43.224:8887/burger-nav.png) no-repeat 98%
+      center;
   }
 }
