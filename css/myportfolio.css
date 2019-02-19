@@ -1,5 +1,5 @@
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -66,6 +66,9 @@ ul.menu {
   font-size: 18px;
 }
 
+.menu-list.current a {
+  color: blue;
+}
 .nav a {
   width: 100px;
   display: block;
@@ -274,6 +277,12 @@ div .media-icons-footer {
   height: 450px;
 }
 
+/* About Me Page*/
+.img-about-me {
+  width: 1000px;
+  height: 300px;
+}
+
 /* Project Page styling */
 .project-grid {
   display: grid;
@@ -448,6 +457,10 @@ MEDIA QUERIES
 */
 /* CSS styling for large tablets and small laptops */
 @media screen and (min-width: 769px) and (max-width: 1025px) {
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     overflow-x: hidden;
   }
@@ -658,30 +671,426 @@ MEDIA QUERIES
 MEDIA QUERY FOR MOBILE PHONES
 */
 /* css styling for ipads and mini-tablets */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 420px) and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
   html {
     overflow-x: hidden;
+    overflow-y: scroll;
   }
 
-  body {
-    position: relative;
+  .body {
+    max-width: 100%;
   }
+
   .container-1 {
-    width: 80%;
-    margin: 1% 0%;
-    position: absolute;
-    left: 10%;
+    width: 90%;
+    position: relative;
+    left: 3vh;
   }
 
   /*Naviagtion  Bar */
-  .burger-nav {
-    display: block;
-    height: 20px;
-    width: 100%;
+  .header {
+    grid-template-areas:
+      "nav-logo"
+      "nav"
+      "icons";
+  }
+
+  .menu-btn {
     position: absolute;
-    top: 30vw;
-    left: 2px;
-    background: url(http://192.168.43.224:8887/burger-nav.png) no-repeat 98%
-      center;
+    margin-left: 550px;
+    z-index: 3;
+    margin-top: 38px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .btn-line {
+    width: 38px;
+    height: 3px;
+    background: black;
+    margin: 0 0 5px 0;
+  }
+
+  .nav {
+    position: relative;
+    margin-left: 0px;
+    width: 18%;
+    z-index: 3;
+  }
+
+  .menu {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .menu-list a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: start;
+  }
+
+  .menu.open {
+    visibility: visible;
+    height: auto;
+  }
+
+  .menu-list.current a {
+    color: blue;
+  }
+
+  .icons {
+    grid-area: icons;
+    top: 0;
+  }
+  .headtext {
+    max-width: 90%;
+    margin-top: 2vw;
+    margin-left: 0vh;
+  }
+  .work-culture {
+    left: 5%;
+  }
+
+  .flex-image {
+    width: 500px;
+    height: 300px;
+  }
+
+  .flex-container-row {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  /* Forms */
+  /* Feedback Form */
+  .myform {
+    width: 80%;
+    position: relative;
+    left: 7vh;
+    border-radius: 0%;
+  }
+
+  .myform-item {
+    width: 85%;
+    height: 40px;
+  }
+
+  #btn-submit {
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
+
+  /* Images at About Me page */
+  .img-about-me {
+    width: 100%;
+  }
+
+  .img-about-me > img {
+    width: 100%;
+  }
+
+  /*Project Page Styling */
+  .project-grid {
+    grid-template-areas:
+      "img-disp"
+      "img-desc"
+      "btn-links";
+    grid-template-rows: repeat(1fr);
+    width: 90%;
+  }
+
+  .img-disp {
+    grid-area: img-disp;
+    width: 100%;
+  }
+
+  .img-desc {
+    grid-area: img-desc;
+    width: 100%;
+  }
+
+  .btn-links {
+    grid-area: btn-links;
+    width: 100%;
+  }
+
+  .grid-images {
+    width: 250px;
+    height: 250px;
+    border: 4px solid lightgray;
+  }
+
+  /* Footer Styling */
+  .footer li a {
+    text-align: left;
+    width: 20%;
+  }
+
+  .footer li a {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* Testimonial Page*/
+  .testimonial-grid {
+    grid-template-areas:
+      "testify"
+      "testify-img";
+    grid-gap: 0px;
+    margin-top: 100px;
+  }
+
+  .testify {
+    width: 700px;
+  }
+
+  .testimony {
+    border-left: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+    border-bottom: none;
+  }
+
+  .testifier-img {
+    margin-left: 5vh;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MEDIA QUERY FOR MOBILE PHONES
+*/
+/* css styling for small phones */
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .body {
+    max-width: 100%;
+  }
+
+  .container-1 {
+    width: 70%;
+    position: relative;
+    margin-left: 0%;
+  }
+
+  /*Naviagtion  Bar */
+  .header {
+    grid-template-areas:
+      "nav-logo"
+      "nav"
+      "icons";
+  }
+
+  .menu-btn {
+    position: absolute;
+    margin-left: 230px;
+    z-index: 3;
+    margin-top: 38px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .btn-line {
+    width: 38px;
+    height: 3px;
+    background: black;
+    margin: 0 0 5px 0;
+  }
+
+  .nav {
+    position: relative;
+    margin-left: 0px;
+    width: 18%;
+    z-index: 3;
+  }
+
+  .menu {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .menu-list a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: start;
+  }
+
+  .menu.open {
+    visibility: visible;
+    height: auto;
+  }
+
+  .menu-list.current a {
+    color: blue;
+  }
+  .icons {
+    grid-area: icons;
+    top: 0;
+  }
+
+  .headtext {
+    width: 90%;
+    margin-top: 2vw;
+    margin-left: 0vh;
+  }
+
+  .headtext h1 {
+    font-size: 2rem;
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0, 0;
+  }
+
+  .slider-image {
+    width: 150px;
+    height: 350px;
+  }
+
+  .work-culture {
+    left: 3%;
+  }
+
+  .flex-image {
+    width: 250px;
+    height: 350px;
+  }
+
+  .flex-container-row {
+    flex-direction: column;
+  }
+
+  .flex-row-img {
+    width: 230px;
+    height: 300px;
+  }
+  /* Forms */
+  /* Feedback Form */
+  .myform {
+    width: 90%;
+    position: relative;
+    left: 1vh;
+    border-radius: 0%;
+  }
+
+  .myform-item {
+    width: 80%;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  #btn-submit {
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
+
+  /* About Me Page Styling */
+  .blockquote {
+    font-size: 18px;
+  }
+
+  .img-about-me {
+    width: 255px;
+    height: 150px;
+  }
+
+  /*Project Page Styling */
+  .project-grid {
+    grid-template-areas:
+      "img-disp"
+      "img-desc"
+      "btn-links";
+    grid-template-rows: repeat(1fr);
+    width: 90%;
+  }
+
+  .img-disp {
+    grid-area: img-disp;
+    width: 100%;
+  }
+
+  .img-desc {
+    grid-area: img-desc;
+    width: 100%;
+  }
+
+  .btn-links {
+    grid-area: btn-links;
+    width: 100%;
+  }
+
+  .grid-images {
+    width: 250px;
+    height: 250px;
+    border: 4px solid lightgray;
+  }
+
+  /* Testimonial Page*/
+  .testimonial-grid {
+    grid-template-areas:
+      "testify"
+      "testify-img";
+    grid-gap: 0px;
+    margin-top: 100px;
+    margin-left: 0vh;
+  }
+
+  .testify {
+    width: 310px;
+  }
+
+  .testimony {
+    border-left: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+    border-bottom: none;
+    font-size: 1.2rem;
+  }
+
+  .testifier-img {
+    margin-left: 0vh;
+    width: 305px;
+    height: 350px;
+  }
+
+  /* Footer Styling */
+
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer li {
+    text-align: left;
+    width: 40%;
+    line-height: 2;
+    color: black;
+  }
+
+  .footer ul li a {
+    font-weight: 0%;
+    font-size: 14px;
+  }
+
+  .media-icons-footer {
+    width: 60%;
+    left: 30%;
+    margin-top: 50px;
+  }
+
+  .media-icons-footer i {
+    width: 10%;
   }
 }

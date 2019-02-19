@@ -18,17 +18,22 @@
     
     <div class="container-1">
         <header class="header">
-            <img src="images\ekene.JPG" class="nav-logo">
-            <nav class="nav">
-            <div class="burger-nav"></div>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>		
-                </ul>
-            </nav>
+            <img src="images\ekene.JPG" class="nav-logo" />
+			<div class="menu-btn">
+				<div id="ln1" class="btn-line"></div>
+				<div id="ln2" class="btn-line"></div>
+				<div id="ln3" class="btn-line"></div>
+			</div><br>
+			<nav class="nav">
+				<ul class="menu">
+					<li class="menu-list"><a href="/index.html">Home</a></li>
+					<li class="menu-list"><a href="/aboutme.html">About Me</a></li>
+					<li class="menu-list"><a href="/projects.html">Projects</a></li>
+					<li class="menu-list current"><a href="/contact.html">Contact</a></li>
+					<li class="menu-list"><a href="/testimonials.html">Testimonials</a></li>
+						
+				</ul>
+			</nav>
             
                         
             <div class="icons">
@@ -49,18 +54,18 @@
         <br><br>
         <p  class="lead">---- CONTACT</p>
         <div class="myform">
-            <form>
+            <form action="/contact/contactform" method="POST">
             <br>
-                <label><b>Name</b></label><br>
+                <label><b> Name</b></label><br>
                 <input class="myform-item" type="text" size="85" name="nametxt" required/>
                 <br><br>
-                <label><b>Email</b></label><br>
+                <label><b> Email</b></label><br>
                 <input class="myform-item" type="email" size="85" name="emailtxt" required/>
                 <br><br>
-                <label><b>Business Name</b></label><br>
-                <input class="myform-item" type="text" size="85" name="txtBusName" required/>
+                <label><b> Business Name</b></label><br>
+                <input class="myform-item" type="text" size="85" name="busNametxt" required/>
                 <br><br>
-                <label><b>Message</b></label><br>
+                <label><b> Message</b></label><br>
                 <textarea class="myform-item" require></textarea>
                 <br>
                 <button type="submit" id="btn-submit">Send</button>
@@ -69,7 +74,7 @@
         </div>   
         <br>
         <div>
-            <i class="fas fa-envelope"><a href="#"> You can send me a direct Email</a></i>
+            <i class="fas fa-envelope"><a href=MALITO:ekeneidiagbor@gmail.com> You can send me a direct Email</a></i>
         </div>
 
         <br>
